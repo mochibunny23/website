@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<title<Rotating Box JavaScript</title>
+
+<style>
+/** Beginning of the cube JavaAScript and CSS **/
+
+    
+div.jkcubeslideshow{ /* main container */
+	background: white;
+	display: block;
+	width: 300px; /* default width of main container */
+	height: 375px; /* default height of main container */
+	position: relative;
+	-webkit-perspective: 1000px; /* Greater the value, less pronounced the 3D effect */
+	perspective: 1000px; /* Greater the value, less pronounced the 3D effect */;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+div.side1, div.side2 { /* two panels that make up cube effect */
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	backface-visibility: hidden; /* hide backface of DIVs */
+	transition: all 1s ease-in-out; /* CSS transition. Actual duration set by script */;
+}
+
+div.side1 img, div.side2 img { /* how should slideshow images be sized inside panels? */
+	width: 100%;
+  height: 375px; 
+ /*height: auto;*/ 
+}
+</style>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="jkcubeslideshow.js"></script>
+
+<script>
+
+var cubeshowvar1 // arbitrary but unique variable to store slideshow instance
+
+jQuery(function($){
+	cubeshowvar1 = new jkcubeslideshow({
+		id: 'cubeshow1',
+		dimensions: [300, 375],
+		images: [
+							['alaska.jpg'],
+							['cruise.jpg'],
+							['graduation.jpg'],
+							['mochi.jpg'],
+							['sixflags.jpg'] //<-- no comma after last image
+						] //<-- no comma after last setting
+	})
+})
+/** End of the cube JavaAScript and CSS **/
+
+</script>
+
+</style>
+</head>
+
+<body>
+
+<!-- This is the beginning of the cube html code -->
+<br/>
+<br/>
+<div class="jkcubeslideshow" id="cubeshow1"></div>
+<br />
+<br/>
+<!-- This is the end of the cube html code -->
+	<p><h5><a href="index.html">Back to My Blog</a><h5></p>
+	<p><h5><a href="schoolSchedule.html">My Middle School Schedule</a><h5></p>
+	<p><h5><a href="tictactoe.html">Tic Tac Toe</a><h5></p>
+	<p><h5><a href="music.html">Music Vidoes</a><h5></p>
+</body>
+</html>
