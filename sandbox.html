@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<style>div {
+			border:1px solid rgb(189,185,185);
+			box-shadow: 0 2px 4 px #000000;
+			display: flex;
+		}
+		p {
+			border: 1px solid rgb(189,185,185);
+			margin-left:2px;
+		}
+		.container-column {
+			display:flex;
+			flex-direction:column;
+			border: 1px solid blue;
+		}
+		#wrap {
+		padding:20px;
+		margin-bottom:10px;
+		border:1 px solid rgb(189,185,185);
+		display:flex;
+		flex-wrap:wrap;	
+		}	
+		#container {
+			display:flex;
+			border:1px solid#333;
+			padding:10px;
+			margin:10px;
+		}
+		#small-content {
+			border:1px solid black;
+			margin-right:2px;
+		}
+		#large-content {
+			border:1 px solid black;
+		}
+		#item1{
+			flex-grow:1;
+		}
+		#item2{
+			flex-grow:2;
+		}
+		#item3{
+			flex-grow:3;
+		}
+		#item1 {
+			flex-shrink:1;
+			flex-grow:1;
+		}</style>
+	</head>
+	<body>
+		<h1>My Blog</h1>
+		<p>Today, I went to the <a href="#BA2781">park</a> and saw some birds.</p>
+		<div>
+			<p>Mc Donalds</p>
+			<p> Blah blah blah</p>
+		</div>
+		<h2>This is a row flex container</h2>
+		<div class="container-row">
+			<p>Item 1</p>
+			<p>Item 2</p>
+			<p>Item 3</p>
+		</div>
+		<h2>This is a column flex container</h2>
+		<div class="container-column">
+			<p>Item 1</p>
+			<p>Item 2</p>
+			<p>Item 3</p>
+		</div>
+		<p>Items that do not wrap to the next line:</p>
+		<div id="nowrap>
+			<button>Submit</button>
+			<button>Revert</button>
+			<button>Delete all</button>
+		</div>
+		<p>Items that wrap to the next line if needed:</p>
+		<div id="wrap">
+			<button>Submit</button>
+			<button>Revert</button>
+			<button>Delete all</button>
+		</div>
+		<div id="container">
+			<p id="small-content">brown fox.</p>
+			<p id="large-content">The quick brown fox jumps over the lazy dog.</p>
+		</div>
+		<div id="container">
+			<p id="item1">Element 1</p>
+			<p id="item2">Element 2</p>
+			<p id="item3">Element 3</p>
+		</div>
+	</body>
+</html>
